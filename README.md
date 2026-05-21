@@ -7,7 +7,14 @@ This repository contains a modular, containerized end-to-end machine learning pi
 ### Prerequisites
 * **Docker Desktop** must be installed and running on your system.
 
-### Step 1: Build the Docker Image
+
+### Step 1 : pull the docker image
+
+```bash
+docker pull ahamedmna/iris-classification:latest
+```
+
+### Step 1 (alternative): Build the Docker Image
 Open your terminal in the root directory of the project (where the `Dockerfile` is located) and run the following command to compile the container image:
 
 ```bash
@@ -19,12 +26,15 @@ docker build -t iris-classification .
 docker build --no-cache -t iris-classification .
 ```
 
+
+
 ### Step 2: Run the Pipeline Container
 Execute the compiled image. The `--rm` flag automatically cleans up the container instance after the execution completes:
 
 ```bash
 docker run --rm iris-classification
 ```
+
 
 ## Expected Output
 
@@ -75,3 +85,5 @@ Confidence Scores per Species:
    PIPELINE EXECUTION COMPLETED END-TO-END!      
 ==================================================
 ```
+
+
